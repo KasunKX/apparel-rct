@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  & #root {
+    width: 100%;
+    height: 100vh;
+
+    & .container {
+      width: 100%;
+      height: 100vh;
+
+      & .one {
+        width: 100%;
+        height: 100vh;
+
+        & nav {
+          height: 12.5vh;
+          width: 100%;
+          display: flex;
+          align-items: center;
+
+          & img {
+            left: 8%;
+            position: relative;
+            width: 35%;
+          }
+        }
+
+        & .img {
+          width: 100%;
+          height: 30vh;
+          background-image: url("../images/hero-mobile.jpg");
+          position: relative;
+          background-repeat: no-repeat;
+          background-size: 100%;
+        }
+      }
+
+      & .two {
+        width: 98%;
+        height: 48vh;
+        display: flex;
+        flex-direction: column;
+        padding-top: 4vh;
+        justify-content: space-evenly;
+        box-sizing: border-box;
+
+        & .texts {
+          width: 100%;
+
+          & .a,
+          .b {
+            font-family: "Josefin Sans", sans-serif;
+            text-align: center;
+            font-size: 2.2em;
+          }
+
+          & .a,
+          .b,
+          .c {
+            position: relative;
+            left: -20%;
+            opacity: 0;
+            transition: 0.75s;
+            margin-bottom: 5px;
+          }
+
+          & .appear {
+            left: 0;
+            opacity: 1;
+            animation-name: letter;
+            animation-duration: 1.25s;
+            animation-delay: 1.5s;
+            animation-fill-mode: forwards;
+            transition: 0.8s;
+          }
+
+          & .a {
+            font-weight: 300;
+            color: hsl(0, 36%, 70%);
+            transition-delay: 0.6s;
+          }
+
+          & .b {
+            color: hsl(0, 6%, 24%);
+            transition-delay: 1s;
+          }
+
+          & .c {
+            transition-delay: 1.4s;
+          }
+        }
+
+        & .para {
+          font-family: "Josefin Sans", sans-serif;
+          text-align: center;
+          font-size: 0.9em;
+          width: 76%;
+          position: relative;
+          left: -20%;
+          line-height: 1.19em;
+          color: hsl(0, 36%, 70%);
+          font-weight: 400;
+          transition: 1s;
+          transition-delay: 2s;
+          opacity: 0;
+        }
+
+        & .paraAppear {
+          left: 12%;
+          opacity: 1;
+        }
+
+        & .input {
+          width: 90%;
+          height: 6.5vh;
+          display: flex;
+          position: relative;
+          border-radius: 22px;
+          border: 1px solid hsl(0, 36%, 70%);
+          justify-content: space-between;
+          align-items: center;
+          transition: 0.8s;
+          transition-delay: 2.5s;
+          left: 5%;
+          top: 15%;
+          opacity: 0;
+
+          & input {
+            height: 90%;
+            width: 70%;
+            border: none;
+            outline: none;
+            font-size: 0.9em;
+            border-radius: 20px;
+            font-family: "Josefin Sans", sans-serif;
+            padding-left: 7.5%;
+            max-width: 360px;
+          }
+
+          & .submit {
+            width: 20%;
+            height: 100%;
+            border-radius: 20px;
+            background: linear-gradient(
+              135deg,
+              hsl(0, 80%, 86%),
+              hsl(0, 74%, 74%)
+            );
+            overflow: hidden;
+            border: none;
+            outline: none;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+          }
+          & .submit:hover {
+            background: linear-gradient(
+              135deg,
+              hsl(0, 100%, 92%),
+              hsl(0, 76%, 67%)
+            );
+          }
+
+          & .submit:active {
+            transform: scale(0.99, 0.99);
+            background: linear-gradient(
+              270deg,
+              hsl(0, 80%, 86%),
+              hsl(0, 74%, 74%)
+            );
+          }
+        }
+
+        & .inputAppear {
+          top: 0;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@keyframes letter {
+  from {
+    letter-spacing: 0;
+  }
+  to {
+    letter-spacing: 10px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  body {
+    & #root {
+      & .container {
+        & .one {
+          & .img {
+            height: 36vh;
+          }
+        }
+
+        & .two {
+          padding-top: 5.5vh;
+
+          & .texts {
+            & .a,
+            .b,
+            .c {
+              font-size: 3em;
+            }
+          }
+
+          & .para {
+            font-size: 1.75em;
+          }
+
+          & .input {
+            width: 80%;
+            left: 10%;
+
+            & input {
+              font-size: 1.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1024px) {
+  body {
+    & #root {
+      max-height: 100vh;
+      max-width: 100%;
+      & .container {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+
+        & .one {
+          & nav {
+            position: absolute;
+            width: 100%;
+            left: 0%;
+            top: 5%;
+
+            & img {
+              width: 10%;
+            }
+          }
+
+          & .img {
+            position: relative;
+            height: 100vh;
+            background-image: url("../images/hero-desktop.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            overflow: none;
+          }
+        }
+
+        & .two {
+          height: 64vh;
+          position: relative;
+          top: 18vh;
+          width: 140vw;
+
+          & .texts {
+            & .a,
+            .b,
+            .c {
+              font-size: 3.25em;
+              text-align: left;
+              position: relative;
+              left: 1%;
+            }
+
+            & .appear {
+              left: 13%;
+            }
+          }
+          & .para {
+            text-align: left;
+            left: 1%;
+            font-size: 1em;
+            width: 60%;
+            line-height: 4vh;
+          }
+
+          & .paraAppear {
+            left: 13%;
+          }
+          & .input {
+            height: 6.5vh;
+            width: 50%;
+            left: 13%;
+            font-size: 0.75em;
+          }
+        }
+      }
+    }
+  }
+}

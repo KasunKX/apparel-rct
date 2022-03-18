@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, white, #fff5f5);
+}
+
+body #root {
+  width: 100%;
+  height: 100vh;
+}
+
+body #root .container {
+  width: 100%;
+  height: 100vh;
+}
+
+body #root .container .one {
+  width: 100%;
+  height: 100vh;
+}
+
+body #root .container .one nav {
+  height: 12.5vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #root .container .one nav img {
+  left: 8%;
+  position: relative;
+  width: 35%;
+}
+
+body #root .container .one .img {
+  width: 100%;
+  height: 30vh;
+  background-image: url("../images/hero-mobile.jpg");
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+body #root .container .two {
+  width: 98%;
+  height: 48vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 4vh;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body #root .container .two .texts {
+  width: 100%;
+}
+
+body #root .container .two .texts .a,
+body #root .container .two .texts .b {
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  font-size: 2.2em;
+}
+
+body #root .container .two .texts .a,
+body #root .container .two .texts .b,
+body #root .container .two .texts .c {
+  position: relative;
+  left: -20%;
+  opacity: 0;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+  margin-bottom: 5px;
+}
+
+body #root .container .two .texts .appear {
+  left: 0;
+  opacity: 1;
+  -webkit-animation-name: letter;
+          animation-name: letter;
+  -webkit-animation-duration: 1.25s;
+          animation-duration: 1.25s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+body #root .container .two .texts .a {
+  font-weight: 300;
+  color: #ce9797;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+body #root .container .two .texts .b {
+  color: #413a3a;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+body #root .container .two .texts .c {
+  -webkit-transition-delay: 1.4s;
+          transition-delay: 1.4s;
+}
+
+body #root .container .two .para {
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  font-size: 0.9em;
+  width: 76%;
+  position: relative;
+  left: -20%;
+  line-height: 1.19em;
+  color: #ce9797;
+  font-weight: 400;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  opacity: 0;
+}
+
+body #root .container .two .paraAppear {
+  left: 12%;
+  opacity: 1;
+}
+
+body #root .container .two .input {
+  width: 90%;
+  height: 6.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  border-radius: 22px;
+  border: 1px solid #ce9797;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-transition-delay: 2.5s;
+          transition-delay: 2.5s;
+  left: 5%;
+  top: 15%;
+  opacity: 0;
+}
+
+body #root .container .two .input input {
+  height: 90%;
+  width: 70%;
+  border: none;
+  outline: none;
+  font-size: 0.9em;
+  border-radius: 20px;
+  font-family: "Josefin Sans", sans-serif;
+  padding-left: 7.5%;
+  max-width: 360px;
+}
+
+body #root .container .two .input .submit {
+  width: 20%;
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  overflow: hidden;
+  border: none;
+  outline: none;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+body #root .container .two .input .submit:hover {
+  background: linear-gradient(135deg, #ffd6d6, #eb6b6b);
+}
+
+body #root .container .two .input .submit:active {
+  -webkit-transform: scale(0.99, 0.99);
+          transform: scale(0.99, 0.99);
+  background: -webkit-gradient(linear, right top, left top, from(#f8bfbf), to(#ee8c8c));
+  background: linear-gradient(270deg, #f8bfbf, #ee8c8c);
+}
+
+body #root .container .two .inputAppear {
+  top: 0;
+  opacity: 1;
+}
+
+@-webkit-keyframes letter {
+  from {
+    letter-spacing: 0;
+  }
+  to {
+    letter-spacing: 10px;
+  }
+}
+
+@keyframes letter {
+  from {
+    letter-spacing: 0;
+  }
+  to {
+    letter-spacing: 10px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  body #root .container .one .img {
+    height: 36vh;
+  }
+  body #root .container .two {
+    padding-top: 5.5vh;
+  }
+  body #root .container .two .texts .a,
+  body #root .container .two .texts .b,
+  body #root .container .two .texts .c {
+    font-size: 3em;
+  }
+  body #root .container .two .para {
+    font-size: 1.75em;
+  }
+  body #root .container .two .input {
+    width: 80%;
+    left: 10%;
+  }
+  body #root .container .two .input input {
+    font-size: 1.5em;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  body #root {
+    max-height: 100vh;
+    max-width: 100%;
+  }
+  body #root .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    width: 100%;
+  }
+  body #root .container .one nav {
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    top: 5%;
+  }
+  body #root .container .one nav img {
+    width: 10%;
+  }
+  body #root .container .one .img {
+    position: relative;
+    height: 100vh;
+    background-image: url("../images/hero-desktop.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    overflow: none;
+  }
+  body #root .container .two {
+    height: 64vh;
+    position: relative;
+    top: 18vh;
+    width: 140vw;
+  }
+  body #root .container .two .texts .a,
+  body #root .container .two .texts .b,
+  body #root .container .two .texts .c {
+    font-size: 3.25em;
+    text-align: left;
+    position: relative;
+    left: 1%;
+  }
+  body #root .container .two .texts .appear {
+    left: 13%;
+  }
+  body #root .container .two .para {
+    text-align: left;
+    left: 1%;
+    font-size: 1em;
+    width: 60%;
+    line-height: 4vh;
+  }
+  body #root .container .two .paraAppear {
+    left: 13%;
+  }
+  body #root .container .two .input {
+    height: 6.5vh;
+    width: 50%;
+    left: 13%;
+    font-size: 0.75em;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
